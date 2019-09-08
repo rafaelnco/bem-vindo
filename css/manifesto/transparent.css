@@ -1,0 +1,17 @@
+
+.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > .bg {
+	opacity: 0.7;
+}
+
+
+.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > article {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+	.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > article {
+	    height: 50%;
+	}
+}

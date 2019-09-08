@@ -1,0 +1,82 @@
+.swiper-container-manifesto
+{
+    /*height:  -webkit-calc(100% - 15vh);
+    height:  -moz-calc(100% - 15vh);
+    height: calc(100% - 15vh);
+    margin-top: 15vh !important;*/
+    height: 85vh;
+    margin-top: 15vh;
+}
+
+.swiper-container-manifesto > .bg > svg{
+    height: 100%;
+    width: 100%;
+}
+.swiper-container-manifesto >.swiper-scrollbar-v {
+    position: absolute;
+    right: 3px;
+    top: 1%;
+    z-index: 50;
+    width: 5px;
+    height: 98%;
+}
+
+.swiper-container-manifesto .swiper-slide > p:last-child {
+    margin-right: 10vw;
+    width: 30vw;
+    padding-right: 10vw;
+}
+.swiper-container-manifesto .swiper-slide > p {
+    width: 25vw;
+    margin-left: 10vw;
+    height: 100%;
+    text-align: justify;
+}
+.swiper-container-manifesto .swiper-slide > p mark {
+    background-color: transparent;
+    color: tomato;
+}
+
+.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > article > p {
+  margin: 0;
+  text-align: left;
+}
+.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > .bg {
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: absolute;
+}
+
+.swiper-container-manifesto .swiper-slide > p mark {
+    color: cornflowerblue;
+}
+.swiper-container-manifesto > .swiper-wrapper > .swiper-slide > article {
+    width: 100%;
+    padding: 10%;
+    padding-right: 55%;
+    box-sizing: border-box;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+
+  .swiper-container-manifesto .swiper-slide > p {
+      width: 70vw;
+      margin-left: 15vw;
+  }
+
+  
+  .swiper-container-manifesto > .swiper-wrapper > .swiper-slide > article {
+      width: 100%;
+      height: 100%;
+      padding: 10%;
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      text-align: left;
+  }
+}
+
+{% include css/social/{{site.manifesto_show}}.css %}

@@ -1,0 +1,105 @@
+<style>
+  .plus_icon, #plus,
+  .minus_icon, #minus {
+      text-decoration: none;
+      cursor: pointer;
+
+      width: 2rem;
+      height: 2rem;
+
+      z-index: 10;
+      margin: 1rem;
+      box-sizing: border-box;
+
+      vertical-align: bottom;
+      right: 0;
+      position: absolute;
+  }
+  .plus_icon, #plus {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZD0iTTQwMS42NjQgNDAxLjY2NGMtODAuNDQ4IDgwLjQ0OC0yMTAuODggODAuNDQ4LTI5MS4zMjggMC04MC40NDgtODAuNDQ4LTgwLjQ0OC0yMTAuODggMC0yOTEuMzI4IDgwLjQ0OC04MC40NDggMjEwLjg4LTgwLjQ0OCAyOTEuMzI4IDAgODAuNDQ4IDgwLjQ0OCA4MC40NDggMjEwLjg4IDAgMjkxLjMyOHpNMzczLjM4IDM3My4zOGM2NC44OC02NC44OCA2NC44Ny0xNjkuODg4IDAtMjM0Ljc2LTY0Ljg4LTY0Ljg4LTE2OS44OS02NC44Ny0yMzQuNzYgMC02NC44OCA2NC44OC02NC44NyAxNjkuODg4IDAgMjM0Ljc2IDY0Ljg4IDY0Ljg4IDE2OS44OSA2NC44NyAyMzQuNzYgMHptLTE0My42NTcgNi45NDNsLS4wMDItOTUuMjEzLTk1LjIyLjAwMi4wMTctNTEuMTYgOTUuMjAyLS4wMDUtLjAwNC05NS4yMDMgNTEuMTU4LjAxNC4wMDYgOTUuMTg1IDk1LjE4My0uMDA2LjAxNyA1MS4xNjgtOTUuMTk2LjAwMi4wMDcgOTUuMTk4LTUxLjE2Ny4wMTh6Ii8+PHBhdGggZD0iTTIzOC4xOTQgNDIwLjU0MmMtMjAuNTQ2LTIuMTMzLTQ1LjI1My0xMC4xMzMtNjMuMzYtMjAuNTE2LTQyLjMzLTI0LjI3Mi03MC4zMDMtNjIuNjU1LTgxLjE3LTExMS4zODItMy40NC0xNS40MTQtMy40MzItNDkuMDYuMDEyLTY0Ljg5MyAxNC40MS02Ni4yNDYgNjIuNjg4LTExNS4wNCAxMjguMzc2LTEyOS43NDcgOS44MzUtMi4yMDIgMTQuMTQ0LTIuNTIgMzQuMDQtMi41MTcgMTguMTIuMDA0IDI0LjY2Ni40MTYgMzIgMi4wMTQgMzMuOTQ1IDcuMzk3IDYwLjI0MyAyMS43MzQgODQuNjk2IDQ2LjE3NSAyNC43MzggMjQuNzI2IDM5LjQgNTIuMzQgNDYuMTIyIDg2Ljg1OCAyLjk4IDE1LjMwMyAyLjc0NSA0Ni40Mi0uNDY0IDYxLjQ0OC0xOC4xNzMgODUuMTMtOTQuNzQgMTQxLjQ0LTE4MC4yNTIgMTMyLjU2MnptNDMuMzktODcuNzA0di00Ny43M2g5NS40OTZsLS4yOS0yNS43NjItLjI5LTI1Ljc2Mi00Ny40Ni0uMjgzLTQ3LjQ1Ni0uMjgydi05NC4zNWgtNTIuMDY4VjIzMy4wNGgtOTUuNDU4djUyLjA2OWg5NS40NTh2OTUuNDU4aDUyLjA2OHYtNDcuNzN6IiBvcGFjaXR5PSIuOTA2IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii44NjIiLz48L3N2Zz4=");
+  }
+  .minus_icon, #minus {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZD0iTTQwMS42NjQgNDAxLjY2NGMtODAuNDQ4IDgwLjQ0OC0yMTAuODggODAuNDQ4LTI5MS4zMjggMC04MC40NDgtODAuNDQ4LTgwLjQ0OC0yMTAuODggMC0yOTEuMzI4IDgwLjQ0OC04MC40NDggMjEwLjg4LTgwLjQ0OCAyOTEuMzI4IDAgODAuNDQ4IDgwLjQ0OCA4MC40NDggMjEwLjg4IDAgMjkxLjMyOHpNMzczLjM4IDM3My4zOGM2NC44OC02NC44OCA2NC44Ny0xNjkuODg4IDAtMjM0Ljc2LTY0Ljg4LTY0Ljg4LTE2OS44OS02NC44Ny0yMzQuNzYgMC02NC44OCA2NC44OC02NC44NyAxNjkuODg4IDAgMjM0Ljc2IDY0Ljg4IDY0Ljg4IDE2OS44OSA2NC44NyAyMzQuNzYgMHpNMTM0LjUgMjg1LjExMmwuMDE3LTUxLjE2IDI0MS41NDYtLjAxNS4wMTcgNTEuMTY4cy03My44MTcuMDA0LTI0MS41NzguMDA3eiIvPjxwYXRoIGQ9Ik0yMzEuMzggNDE5LjgxYy0zNy45NTItNi4xNzMtNzAuNjItMjMuNTk1LTk2LjcwNC01MS41NzMtMTkuNTQ4LTIwLjk2OC0zMy45NzQtNDguMTU1LTM5Ljk2LTc1LjMxNS0zLjQ2My0xNS43MDUtNC41NTUtMjcuNjY4LTMuOTQyLTQzLjE5NyAxLjcxMy00My40MiAxOC4zOC04MS4wMzYgNDkuNDMzLTExMS41NjUgMTQuMzE1LTE0LjA3NCAyNi43NTctMjIuODcgNDQuMTU2LTMxLjIxNyA0NS41NjgtMjEuODYgOTYuOTczLTIyLjAxNiAxNDIuMzE0LS40MzYgMzguMDI0IDE4LjA5OCA2Ny44NDIgNDkuNzU4IDgzLjA1OCA4OC4xOSAyOC44NTUgNzIuODc2IDMuMDYzIDE1NS4zMS02Mi4zNCAxOTkuMjQtMTYuMzc3IDExLjAwMi0zNy44MjYgMTkuODk2LTU5LjExIDI0LjUxLTExLjgxMyAyLjU2Mi00NC42OTcgMy4zNS01Ni45MDQgMS4zNjR6bTE0NC44MzItMTM3LjEyYy4xNTctMS42MjQuMTctMTMuMjg4LjAyOC0yNS45MTdsLS4yNTctMjIuOTYzSDEzNC4xNHY1MS44MzdoMjQxLjc4OWwuMjg1LTIuOTU2eiIgb3BhY2l0eT0iLjkwNiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuODYzIi8+PC9zdmc+");
+  }
+
+  body {
+    background: #2b2e31;
+  }
+
+  .slider {
+    position: absolute;
+    width: 50vw;
+
+    bottom: 3vh;
+    left: 25vw;
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    border: none;
+    padding: 1px 2px;
+    border-radius: 14px;
+    background: #232528;
+    box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+    -webkit-box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+    outline: none; /* no focus outline */
+  }
+
+  input[type="range"]::-moz-range-track {
+    border: inherit;
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-track {
+    border: inherit;
+    color: transparent; /* don't drawn vertical reference line */
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-fill-lower,
+  input[type="range"]::-ms-fill-upper {
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-tooltip {
+    display: none;
+  }
+
+  /* thumb */
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #529de1), color-stop(100%, #245e8f)); /* android <= 2.2 */
+    background-image: -webkit-linear-gradient(top , #529de1 0, #245e8f 100%); /* older mobile safari and android > 2.2 */;
+    background-image: linear-gradient(to bottom, #529de1 0, #245e8f 100%); /* W3C */
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 40px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, #529de1 0, #245e8f 100%); /* W3C */
+  }
+
+  input[type="range"]::-ms-thumb {
+    width: 40px;
+    height: 18px;
+    border-radius: 12px;
+    border: 0;
+    background-image: linear-gradient(to bottom, #529de1 0, #245e8f 100%); /* W3C */
+  }
+</style>
+
+<div id="openseadragon1" style="width: 100vw; height: 100vh">
+</div>
+<div class="slider">
+  <input type="range" name="slider" min="0.5" max="3.0" step="0.5" value="1.0">
+</div>

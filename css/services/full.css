@@ -1,0 +1,26 @@
+
+
+.swiper-container-services  > .swiper-wrapper > .swiper-slide {
+	/*font-size: 150%;*/
+	padding: 0 8%;
+	box-sizing: border-box;
+}
+
+.swiper-container-services > .swiper-wrapper > .swiper-slide > header {
+    /*display: none;*/
+    padding: 0;
+}
+
+.swiper-container-services .swiper-slide .bgoverlay {
+    background-image: initial;
+    background-color: rgba(0,0,0,0.5);
+}
+.swiper-container-services .swiper-slide header,
+.swiper-container-services .swiper-slide article {
+	padding: initial;
+}
+@media (max-width: 768px) {
+	.swiper-container-services .swiper-slide article {
+		padding: 3%;
+	}
+}

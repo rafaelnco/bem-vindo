@@ -1,0 +1,49 @@
+
+.swiper-container-services  > .swiper-wrapper > .swiper-slide{
+
+    height: 100%;
+}
+
+.swiper-container-services .swiper-wrapper-showoff .swiper-slide .bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.swiper-container-services .swiper-slide,
+.swiper-container-services .swiper-slide:hover {
+    background-color: transparent;
+}
+.swiper-container-services > .swiper-wrapper > .swiper-slide > header,
+.swiper-container-services > .swiper-wrapper > .swiper-slide > article {
+	font-size: 2rem;
+	text-align: left;
+	padding-left: 15%;
+} 
+
+.swiper-container-services > .swiper-wrapper > .swiper-slide > article {
+	margin-bottom: 0;
+}
+
+.swiper-container-services > .swiper-wrapper > .swiper-slide button {
+	margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+
+	.swiper-container-services > .swiper-wrapper > .swiper-slide > header,
+	.swiper-container-services > .swiper-wrapper > .swiper-slide > article {
+		font-size: 1.5rem;
+		text-align: left;
+		padding-left: 15%;
+		padding-right: 15%;
+	} 
+	.swiper-container-services > .swiper-wrapper > .swiper-slide > header {
+		margin-top: 15%;
+	}
+	.swiper-container-services > .swiper-wrapper > .swiper-slide .swiper-wrapper-showoff .bg {
+		height: 50%;
+		top: 50%;
+    	background-position: center center;
+	}
+}
